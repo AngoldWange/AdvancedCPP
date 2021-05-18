@@ -24,6 +24,7 @@ int Vector() {
      */
 
 
+
     // 1. iterator
     cout << "1. iterator:" << endl;
     vector<string> vs1 = {"Milton", "Shakespeare", "Austen"};
@@ -99,12 +100,26 @@ int Vector() {
 
 
     // 4. deleting
-    vs2.erase(vs2.begin()++);
+    auto it6 = vs2.erase(vs2.begin()++);
+    cout << *it6 << endl; // Milton
     for (auto c : vs2) cout << c << " "; // Milton
     cout << endl;
-    
-    
 
+
+
+    // 5. capacity and size 
+    vector<int> vi1;
+    cout << "vi1: size: " << vi1.size() << " capacity: " << vi1.capacity() << endl; // vi1: size: 0 capacity: 0    
+    for (vector<int>::size_type ix = 0; ix != 24; ++ix) vi1.push_back(ix);
+    cout << "vi1: size: " << vi1.size() << " capacity: " << vi1.capacity() << endl; // vi1: size: 24 capacity: 32     
+    vi1.reserve(50);
+    cout << "vi1: size: " << vi1.size() << " capacity: " << vi1.capacity() << endl; // vi1: size: 24 capacity: 50     
+    while (vi1.size() != vi1.capacity()) vi1.push_back(0);
+    cout << "vi1: size: " << vi1.size() << " capacity: " << vi1.capacity() << endl; // vi1: size: 50 capacity: 50     
+    vi1.push_back(42);
+    cout << "vi1: size: " << vi1.size() << " capacity: " << vi1.capacity() << endl; // vi1: size: 51 capacity: 100     
+    vi1.shrink_to_fit();
+    cout << "vi1: size: " << vi1.size() << " capacity: " << vi1.capacity() << endl; // vi1: size: 51 capacity: 51    
 
 
     return 0;
@@ -112,6 +127,5 @@ int Vector() {
 
 int main() {
     Vector();
-
 }
 
