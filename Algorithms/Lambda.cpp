@@ -76,9 +76,9 @@ void biggies3(vector<string> &vs, size_t sz, ostream &os = cout, char c = ' ') {
 
 
 int main() {
-    // Lambda expressions are most useful for simple operations that we do not need to use in more than one or two places. 
-    // Similarly, if an operation requires many statements or multiple times, it is ordinarily better to use a function.
-    // Lambda -- Callable unit of code. A lambda is somewhat like an unnamed, inline function.
+// Lambda expressions are most useful for simple operations that we do not need to use in more than one or two places. 
+// Similarly, if an operation requires many statements or multiple times, it is ordinarily better to use a function.
+// Lambda -- Callable unit of code. A lambda is somewhat like an unnamed, inline function.
 
     // Example1 test biggies:
     vector<string> Story = {"the", "quick", "red", "fox", "jumps", "over", "the", "slow", "red", "turtle"};
