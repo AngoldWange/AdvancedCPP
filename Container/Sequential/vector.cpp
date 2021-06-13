@@ -3,8 +3,6 @@
 #include <vector>
 #include <list>
 
-#include "Sales_data.h"
-
 using namespace::std;
 
 int Vector() {
@@ -93,9 +91,9 @@ int Vector() {
     while (cin >> word && word != "Enter")
 	iter = vs4.insert(iter, word); // same as calling push_front() (althought there are no push_front() in vector)
 
-    vector<Sales_data> vsd;
-    vsd.emplace_back("978-0590353403", 25, 15.99);
-    vsd.push_back(Sales_data("978-0670357893", 67, 24.38));
+    // vector<Sales_data> vsd;
+    // vsd.emplace_back("978-0590353403", 25, 15.99);
+    // vsd.push_back(Sales_data("978-0670357893", 67, 24.38));
 
 
 
