@@ -11,6 +11,7 @@ using namespace::std;
 // print containers like vector, deque, list, etc
 template<typename Sequence>
 auto println(Sequence const& seq) -> std::ostream& {
+
     for (auto const& elem : seq) {
 	cout << elem << " ";
     }
